@@ -1,15 +1,31 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 //! import components here
 import MovieSearchForm from './components/MovieSearchForm'
 
+//! import layouts here
+import DefaultLayout from './layouts/DefaultLayout'
+
+
+
 function App() {
+  
+  const [title, setTitle] = useState('')
+
+  const searchTermHandler = (searchTerm) => {
+    setTitle(searchTerm)
+  }
+
+  console.log(title)
+
   return (
-    <React.Fragment>
-      <MovieSearchForm />
-    </React.Fragment>
+    <DefaultLayout>
+      <MovieSearchForm searchTermHandler={searchTermHandler} />
+      <br />
+      <br />
+
+    </DefaultLayout>
   );
 }
 

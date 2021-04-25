@@ -1,0 +1,9 @@
+
+.search-bar {
+    font-size: 40px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow:  24px 24px 60px #c8ccbc,
+            -24px -24px 60px #f8f8f8;
+}
