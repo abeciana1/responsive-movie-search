@@ -10,8 +10,9 @@ class MovieSearchForm extends React.Component {
 
     changeHandler = (e) => {
         this.setState({
-            [e.target.name] : e.target.value
-        }, this.props.searchTermHandler(e.target.value))
+            searchTerm : e.target.value
+        })
+        this.props.searchTermHandler(e.target.value)
     }
 
     render() {

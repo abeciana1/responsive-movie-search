@@ -1,18 +1,15 @@
 import React from 'react';
-// import env from "react-dotenv";
-
-
+import SearchResultCard from './SearchResultCard'
 
 const SearchResultContainer = (props) => {
 
     const moviesMap = (movs) => {
-        console.log(movs)
-        // movs.map(movie => movie)
+        return movs.map(movie => <SearchResultCard movie={movie} /> )
     }
 
     return (
         <React.Fragment>
-            {moviesMap(props.movies)}
+            {props.movies ? moviesMap(props.movies) : null}
         </React.Fragment>
     )
 }
